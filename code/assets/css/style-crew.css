@@ -115,6 +115,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: all 0.3s ease ease-in-out;
   /* background: yellow; */
 }
 
@@ -143,7 +144,7 @@ body {
   /* background-color: bisque; */
   display: flex;
   align-items: center;
-  width: 35vw;
+  /* width: 35vw; */
   height: 35vh;
 }
 
@@ -205,14 +206,15 @@ body {
 }
 
 .content-right {
-  width: 32vw;
-  height: 78vh;
+  width: 38vw;
+  height: 80vh;
   display: flex;
   align-items: flex-end;
-  background-color: yellow;
+  /* justify-content: center; */
+  /* background-color: red; */
   color: #fff;
 }
 
 .content-right img{
-  height: 78vh;
+  height: 70vh;
 }

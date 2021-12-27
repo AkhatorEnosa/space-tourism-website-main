@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,400;0,500;0,600;0,700;1,600&family=Barlow:wght@100&display=swap');
+
+*, html {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  background-image: url("../technology/background-technology-desktop.jpg");
+  background-size: cover;
+ /* background-clip: ;
+  background-color: black; */
+}
+
+.container {
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* background: rgb(182, 158, 158); */
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 10vh;
+  align-items: center;
+}
+
+.glass {
+  position: absolute;
+  width: 52vw;
+  height: 10vh;
+  backdrop-filter: blur(30px);
+  /* filter: blur(60px); */
+  z-index: -1;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 52vw;
+  height: 10vh;
+  font-size: 16px;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.links-content {
+  display: flex;
+  justify-content: space-between;
+  width: 38vw;
+  /* background-color: green; */
+}
+
+.links-content .link {
+  display: flex;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2.7px;
+  height: 10vh;
+  align-items: center;
+  font-weight: light;
+}
+
+.links-content .active {
+  border-bottom: 3px solid white;
+}
+
+.links-content .link:hover {
+  border-bottom: 3px solid #979797;
+}
+
+.links-content .link .span-bold {
+  font-weight: bolder;
+  margin-right: 10px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+}
+
+.main-content {
+  position: relative;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: flex-end;
+  height: 68vh;
+  /* background-color: red; */
+  top: -5vh;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  width: 82vw;
+  height: auto;
+  /* background-color: grey; */
+}
+
+.content-left {
+  width: 45vw;
+  /* height: 30vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease ease-in-out;
+  /* background: yellow; */
+}
+
+.content-left .first {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 4.72px;
+}
+
+.content-left .first .num {
+  color: rgba(255, 255, 255, 0.28);
+}
+
+.tech {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: green; */
+  height: 55vh;
+}
+
+.tech-content {
+  /* background-color: bisque; */
+  display: flex;
+  align-items: center;
+  width: 35vw;
+  height: 38vh;
+}
+
+.tech-content .content-body{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* background: blue; */
+}
+
+.content-body h1 {
+  font-family: 'Bellefair', serif;
+  font-size: 56px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  /* margin-top: 5px; */
+  margin-bottom: 20px;
+}
+
+.content-body h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+  color: #D0D6F9;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+.content-body p {
+  font-family: 'Barlow', sans-serif;
+  font-size: 18px;
+  color: #D0D6F9;
+  line-height: 32px;
+  width: 30vw;
+}
+
+.tech-links {
+  /* background: purple; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80px;
+  height: 35vh;
+}
+
+.tech-link {
+  /* background: #ffff; */
+  /* color:#0B0D17; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  width: 80px;
+  height:80px;
+  border-radius: 70%;
+  cursor: pointer;
+  font-family: "Bellefair", serif;
+  font-size: 32px;
+  font-weight: lighter;
+}
+
+.tech-links > .active {
+  background: #ffff; 
+  color:#0B0D17;
+}
+
+.tech-link:hover {
+  background-color: white;
+  color: #0B0D17;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+}
+
+.content-right {
+  width: 30vw;
+  /* height: 80vh; */
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  /* background-color: blue; */
+  color: #fff;
+}
+
+.content-right img{
+  height: 62vh;
+}

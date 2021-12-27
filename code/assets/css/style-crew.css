@@ -97,7 +97,7 @@ body {
   /* flex-direction: row; */
   justify-content: center;
   height: 68vh;
-  background-color: red;
+  /* background-color: red; */
   top: -5vh;
 }
 
@@ -106,7 +106,7 @@ body {
   justify-content: space-between;
   width: 75vw;
   height: auto;
-  background-color: grey;
+  /* background-color: grey; */
 }
 
 .content-left {
@@ -115,7 +115,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: yellow;
+  /* background: yellow; */
 }
 
 .content-left .first {
@@ -134,13 +134,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: green;
+  /* background-color: green; */
   height: 50vh;
 }
 
 .crew-content {
   position: relative;
-  background-color: bisque;
+  /* background-color: bisque; */
   display: flex;
   align-items: center;
   width: 35vw;
@@ -152,7 +152,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: blue;
+  /* background: blue; */
 }
 
 .content-body h1 {
@@ -169,6 +169,7 @@ body {
   font-size: 32px;
   font-weight: lighter;
   text-transform: uppercase;
+  opacity: 0.4;
 }
 
 .content-body p {
@@ -180,40 +181,38 @@ body {
 }
 
 .crew-links {
-  background: purple;
+  /* background: purple; */
+  display: flex;
+  justify-content: space-between;
+  width: 8vw;
 }
 
 .crew-link {
-  color: #fff;
-  /* border-radius: 70%; */
-  /* opacity: 0.3; */
+  background: #ffff;
+  width: 15px;
+  height: 15px;
+  border-radius: 70%;
+  opacity: 0.4;
+  cursor: pointer;
 }
 
-.crew-link .active {
-  color: white !important;
-  opacity: 1;
+.active {
+  opacity: 1 !important;
 }
 
 .crew-link:hover {
-  border-bottom: 3px solid #979797;
+  opacity: 1 !important;
 }
 
 .content-right {
   width: 32vw;
+  height: 78vh;
   display: flex;
   align-items: flex-end;
-  /* background-color: yellow; */
+  background-color: yellow;
   color: #fff;
 }
 
-.content-right .destination-links {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 23vw;
-  height: 5vh;
-  font-size: 16px;
-  /* background-color: red; */
-  font-family: 'Barlow Condensed', sans-serif;
-  margin-bottom: 20px;
+.content-right img{
+  height: 78vh;
 }

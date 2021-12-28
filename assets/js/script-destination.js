@@ -1,57 +1,47 @@
-var links = document.querySelector(".crew-links");
-var link = document.querySelectorAll(".crew-link");
+var links = document.querySelector(".destination-links");
+var link = document.querySelectorAll(".destination-link");
 var notActive = document.querySelectorAll("div.content-body:not(.content-active)").forEach(item => {
   item.style.opacity = 0;
 });
 var content = document.querySelectorAll(".content-body");
-var member = document.querySelector(".member");
-var contentLeft = document.querySelector(".content-left");
-var contentRight = document.querySelector(".content-right");
-
-
-// increase height if douglas
-
-   contentRight.style.height = "80vh";
-   member.style.height = "82vh";
-
+var spaceElement = document.querySelector(".space-element");
 
 function contentSelect(e) {
-  if(e.target.matches("div.crew-link") && !e.target.classList.contains("active")){
-    
-    if(e.target.matches("div.two")) { //check if second dot has been clicked
-      member.src = "../code/assets/crew/image-mark-shuttleworth.webp";
+  if(e.target.matches("div.destination-link") && !e.target.classList.contains("active")){
+
+    if(e.target.matches("div.mars")) { //check if mars link has been clicked
+      spaceElement.src = "../assets/destination/image-mars.webp";
       link.forEach(x => { // add "active" class
-        if(x.classList.contains("two")){
+        if(x.classList.contains("mars")){
           x.classList.add("active");
         }else {
           x.classList.remove("active");
         }
       });
-      
+
       content.forEach(x => { // show content
-        if(x.classList.contains("content-two")){
+        if(x.classList.contains("content-mars")){
           x.classList.add("content-active");
           x.style.opacity = 1;
         }else {
           x.classList.remove("content-active");
-          x.classList.remove("doug");
           x.style.opacity = 0;
         }
       });
-      
-    } else if(e.target.matches("div.three")) { // check if europa link has been clicked
-      member.src = "../code/assets/crew/image-victor-glover.webp";
-      
+
+    } else if(e.target.matches("div.europa")) { // check if europa link has been clicked
+      spaceElement.src = "../assets/destination/image-europa.webp";
+
       link.forEach(x => {
-        if(x.classList.contains("three")){
+        if(x.classList.contains("europa")){
           x.classList.add("active");
         }else {
           x.classList.remove("active");
         }
       });
-      
+
       content.forEach(x => {
-        if(x.classList.contains("content-three")){
+        if(x.classList.contains("content-europa")){
           // x.classList.remove("content-active");
           x.classList.add("content-active");
           x.style.opacity = 1;
@@ -60,20 +50,20 @@ function contentSelect(e) {
           x.style.opacity = 0;
         }
       });
-      
-    } else if(e.target.matches("div.four")) { //  check if the titan link has been clicked
-      member.src = "../code/assets/crew/image-anousheh-ansari.webp";
-      
+
+    } else if(e.target.matches("div.titan")) { //  check if the titan link has been clicked
+      spaceElement.src = "../assets/destination/image-titan.webp";
+
       link.forEach(x => {
-        if(x.classList.contains("four")){
+        if(x.classList.contains("titan")){
           x.classList.add("active");
         }else {
           x.classList.remove("active");
         }
       });
-      
+
       content.forEach(x => {
-        if(x.classList.contains("content-four")){
+        if(x.classList.contains("content-titan")){
           // x.classList.remove("content-active");
           x.classList.add("content-active");
           x.style.opacity = 1;
@@ -82,44 +72,31 @@ function contentSelect(e) {
           x.style.opacity = 0;
         }
       });
-      
+
     } else { //  check if the moon link has been clicked
-      member.src = "../code/assets/crew/image-douglas-hurley.webp";
-      
+      spaceElement.src = "../assets/destination/image-moon.webp";
+
       link.forEach(x => {
-        if(x.classList.contains("one")){
+        if(x.classList.contains("moon")){
           x.classList.add("active");
         }else {
           x.classList.remove("active");
         }
       });
-      
+
       content.forEach(x => {
-        if(x.classList.contains("content-one")){
+        if(x.classList.contains("content-moon")){
           // x.classList.remove("content-active");
           x.classList.add("content-active");
-          x.classList.add("doug");
           x.style.opacity = 1;
         }else {
           x.classList.remove("content-active");
           x.style.opacity = 0;
         }
       });
-      
+
     }
 
-      // increase height if douglas
-      if(document.querySelector(".content-active").classList.contains("doug")) {
-         contentRight.style.height = "80vh";
-         member.style.height = "80vh";
-         console.log(true);
-        } else {
-          member.style.height = "70vh";
-          contentLeft.style.width = "50vw";
-        //  alert("zeh");
-        console.log(false);
-      }
-    
   }
 }
 

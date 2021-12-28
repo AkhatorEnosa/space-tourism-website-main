@@ -11,7 +11,7 @@ function contentSelect(e) {
   if(e.target.matches("div.tech-link") && !e.target.classList.contains("active")){
     
     if(e.target.matches("div.two")) { //check if second dot has been clicked
-      machine.src = "../code/assets/technology/image-spaceport-portrait.jpg";
+      machine.src = "../assets/technology/image-spaceport-portrait.jpg";
       link.forEach(x => { // add "active" class
         if(x.classList.contains("two")){
           x.classList.add("active");
@@ -31,7 +31,7 @@ function contentSelect(e) {
       });
       
     } else if(e.target.matches("div.three")) { // check if europa link has been clicked
-      machine.src = "../code/assets/technology/image-space-capsule-portrait.jpg";
+      machine.src = "../assets/technology/image-space-capsule-portrait.jpg";
       
       link.forEach(x => {
         if(x.classList.contains("three")){
@@ -53,7 +53,7 @@ function contentSelect(e) {
       });
       
     } else { //  check if the moon link has been clicked
-      machine.src = "../code/assets/technology/image-launch-vehicle-portrait.jpg";
+      machine.src = "../assets/technology/image-launch-vehicle-portrait.jpg";
       
       link.forEach(x => {
         if(x.classList.contains("one")){

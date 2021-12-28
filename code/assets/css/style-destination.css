@@ -173,6 +173,7 @@ body {
   height: inherit;
   align-items: center;
   font-weight: light;
+  cursor: pointer;
 }
 
 .destination-links .active {

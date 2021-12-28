@@ -138,13 +138,17 @@ body {
 }
 
 .content-right {
-  /* width: 20vw; */
+  width: 20vw;
+  height: 65vh;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
   color: #0B0D17;
+  /* background: #0B0D17; */
 }
 
 .content-right .button {
+  /* position: absolute; */
   display: flex;
   justify-content: center;
   background: white;
@@ -152,6 +156,22 @@ body {
   align-items: center;
   height: 250px;
   border-radius: 50%;
+  right: 50px;
+  cursor: pointer;
+}
+
+.content-right .border {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #0B0D17;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.content-right .boder:hover {
+  transition: all ease-in-out;
 }
 
 .content-right .button p {
@@ -161,7 +181,3 @@ body {
   letter-spacing: 2px;
   font-family: 'Bellefair', serif;
 }
-
-/* destination page */
-
-

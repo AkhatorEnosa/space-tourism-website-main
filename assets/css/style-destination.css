@@ -228,3 +228,229 @@ body {
   font-size: 28px;
   font-weight: lighter;
 }
+
+@media (max-width: 500px), (max-width:550px ){
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    background-image: url("../destination/background-destination-mobile.jpg");
+    background-size: cover;
+  /* background-clip: ;
+    background-color: black; */
+  }
+
+  .container {
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background: rgb(182, 158, 158); */
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10vh;
+    align-items: center;
+  }
+
+  .glass {
+    position: absolute;
+    width: 52vw;
+    height: 10vh;
+    backdrop-filter: blur(30px);
+    /* filter: blur(60px); */
+    z-index: -1;
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 52vw;
+    height: 10vh;
+    font-size: 16px;
+    font-family: 'Barlow Condensed', sans-serif;
+  }
+
+  .links-content {
+    display: flex;
+    justify-content: space-between;
+    width: 38vw;
+    /* background-color: green; */
+  }
+
+  .links-content .link {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+    height: 10vh;
+    align-items: center;
+    font-weight: light;
+  }
+
+  .links-content .active {
+    border-bottom: 3px solid white;
+  }
+
+  .links-content .link:hover {
+    border-bottom: 3px solid #979797;
+  }
+
+  .links-content .link .span-bold {
+    font-weight: bolder;
+    margin-right: 10px;
+  }
+
+  .logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .main-content {
+    position: relative;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    height: 68vh;
+    /* background-color: red; */
+    top: -5vh;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    width: 75vw;
+    height: auto;
+    /* background-color: grey; */
+  }
+
+  .content-left {
+    width: 30vw;
+    /* height: 28vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .content-left .first {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 4.72px;
+  }
+
+  .content-left .first .num {
+    color: rgba(255, 255, 255, 0.28);
+  }
+
+  /* .content-left img {
+    width: 445px;
+    height: 445px;
+  } */
+
+  .content-right {
+    width: 32vw;
+    display: flex;
+    align-items: flex-end;
+    /* background-color: yellow; */
+    color: #fff;
+  }
+
+  /* destination */
+  .destination {
+    display: flex;
+    flex-direction: column;
+    width: 32vw;
+    height: 90%;
+    /* background-color: blue; */
+    /* border: 2px solid white; */
+  }
+
+  .content-right .destination-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 23vw;
+    height: 5vh;
+    font-size: 16px;
+    /* background-color: red; */
+    font-family: 'Barlow Condensed', sans-serif;
+    margin-bottom: 20px;
+  }
+
+  .content-right .destination-links .destination-link {
+    display: flex;
+    color: #D0D6F9;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+    height: inherit;
+    align-items: center;
+    font-weight: light;
+    cursor: pointer;
+  }
+
+  .destination-links .active {
+    color: white !important;
+    border-bottom: 3px solid white;
+  }
+
+  .destination-links  .destination-link:hover {
+    border-bottom: 3px solid #979797;
+  }
+
+  .destination-content .content-body{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30vw;
+    height: 54vh;
+    /* background: grey; */
+  }
+
+  .content-body h2 {
+    font-family: 'Bellefair', serif;
+    font-size: 100px;
+    font-weight: lighter;
+  }
+
+  .content-body p {
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    color: #D0D6F9;
+    line-height: 32px;
+  }
+
+  .dist-time {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    width: 25vw;
+    /* padding-top: 30px; */
+  }
+
+  .dist-time p{
+    font-family: 14px;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 2.36px;
+    margin-bottom: 6px;
+  }
+
+  .dist-time h3 {
+    font-family: 'Bellefair', serif;
+    font-size: 28px;
+    font-weight: lighter;
+  }
+}

@@ -204,8 +204,9 @@ body {
   height: 90vh;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-around; */
-  background: rgb(182, 158, 158);
+  justify-content: space-between;
+  align-self: flex-start;
+  /* background: rgb(182, 158, 158); */
 }
 
 .container .line {
@@ -219,7 +220,7 @@ body {
   justify-content: space-between;
   height: 8vh;
   align-items: center;
-  background: blue;
+  /* background: blue; */
 }
 
 .glass {
@@ -276,7 +277,7 @@ body {
   /* flex-direction: row; */
   justify-content: center;
   height: auto;
-  background-color: red;
+  /* background-color: red; */
   margin-top: -150px;
 }
 

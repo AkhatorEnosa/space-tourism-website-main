@@ -187,7 +187,7 @@ body {
   body > .background-img {
     position: absolute;
     width: 100vw;
-    height: 105vh;
+    height: 97vh;
     background: #0B0D17;
     z-index: -2;
   }

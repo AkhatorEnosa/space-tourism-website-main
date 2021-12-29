@@ -40,8 +40,9 @@ body {
   position: absolute;
   width: 52vw;
   height: 10vh;
-  backdrop-filter: blur(30px);
-  /* filter: blur(60px); */
+    backdrop-filter: contrast(95%);
+    /* backdrop-filter: blur(20px); */
+    filter: blur(60px);
   z-index: -1;
 }
 
@@ -255,7 +256,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     width: 95vw;
-    height: 8vh;
+    height: 96px;
     align-items: center;
     /* background: blue; */
   }
@@ -263,7 +264,7 @@ body {
   .glass {
     position: absolute;
     width: 52vw;
-    height: 8vh;
+    height: 96px;
     padding-right: 50px;
     backdrop-filter: contrast(95%);
     /* backdrop-filter: blur(20px); */
@@ -277,7 +278,7 @@ body {
     align-items: flex-end;
     width: 52vw;
     padding-right: 20px;
-    height: 8vh;
+    height: 96px;
     font-size: 14px;
     font-family: 'Barlow Condensed', sans-serif;
   }
@@ -295,7 +296,7 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2.36px;
-    height: 8vh;
+    height: 96px;
     align-items: center;
     font-weight: light;
   }
@@ -361,7 +362,7 @@ body {
 
   .content-right {
     width: 90vw;
-    height: 369px;
+    height: 480px;
     display: flex;
     align-items: flex-start;
     /* background-color: yellow; */

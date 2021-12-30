@@ -234,15 +234,19 @@ body {
 
   body {
     background-image: url("../destination/background-destination-tablet.jpg");
+    /* background: greenyellow; */
+    /* background-origin: border-box;
+    background-size: cover;
+    background-repeat: no-repeat; */
   }
 
   .container {
     width: 90vw;
-    height: 100vh;
+    height: 102vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-self: flex-start;
+    /* align-self: stretch; */
     /* background: rgb(182, 158, 158); */
   }
 
@@ -362,9 +366,9 @@ body {
 
   .content-right {
     width: 90vw;
-    height: 480px;
+    height: 40vh;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     /* background-color: yellow; */
     color: #fff;
     margin-top: 45px;

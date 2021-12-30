@@ -6,12 +6,19 @@ var notActive = document.querySelectorAll("div.content-body:not(.content-active)
 var content = document.querySelectorAll(".content-body");
 var machine = document.querySelector(".machine");
 
+var clientWidth = document.body.clientWidth
+
 
 function contentSelect(e) {
   if(e.target.matches("div.tech-link") && !e.target.classList.contains("active")){
     
     if(e.target.matches("div.two")) { //check if second dot has been clicked
       machine.src = "../assets/technology/image-spaceport-portrait.jpg";
+
+      if(clientWidth <= 768){
+        machine.src = "../assets/technology/image-spaceport-landscape.jpg";
+      }
+
       link.forEach(x => { // add "active" class
         if(x.classList.contains("two")){
           x.classList.add("active");
@@ -32,6 +39,10 @@ function contentSelect(e) {
       
     } else if(e.target.matches("div.three")) { // check if europa link has been clicked
       machine.src = "../assets/technology/image-space-capsule-portrait.jpg";
+
+      if(clientWidth <= 768){
+        machine.src = "../assets/technology/image-space-capsule-landscape.jpg";
+      }
       
       link.forEach(x => {
         if(x.classList.contains("three")){
@@ -54,6 +65,10 @@ function contentSelect(e) {
       
     } else { //  check if the moon link has been clicked
       machine.src = "../assets/technology/image-launch-vehicle-portrait.jpg";
+
+      if(clientWidth <= 768){
+        machine.src = "../assets/technology/space-launch-vehicle-landscape.jpg";
+      }
       
       link.forEach(x => {
         if(x.classList.contains("one")){
@@ -80,4 +95,26 @@ function contentSelect(e) {
   }
 }
 
+  // change page picture Orientation based on width
+  function getWidth() {
+    if(clientWidth <= 768){
+      if(document.querySelector("content-two")) { 
+        machine.src = "../assets/technology/image-spaceport-landscape.jpg";
+      } else if(document.querySelector("content-three")) { 
+        machine.src = "../assets/technology/image-space-capsule-landscape.jpg";
+      } else {
+        machine.src = "../assets/technology/image-launch-vehicle-landscape.jpg";
+      }
+    } else {
+      if(document.querySelector("content-two")) {
+        machine.src = "../assets/technology/image-spaceport-portrait.jpg";
+      } else if(document.querySelector("content-three")) { 
+        machine.src = "../assets/technology/image-space-capsule-portrait.jpg";
+      } else { 
+        machine.src = "../assets/technology/image-launch-vehicle-portrait.jpg";
+      }
+    }
+  }
+
 links.addEventListener("click", contentSelect);
+window.onresize = getWidth;

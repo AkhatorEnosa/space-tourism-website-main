@@ -8,16 +8,40 @@ var member = document.querySelector(".member");
 var contentLeft = document.querySelector(".content-left");
 var contentRight = document.querySelector(".content-right");
 
+var clientWidth = document.body.clientWidth;
+console.log('first', clientWidth);
 
-// increase height if douglas
+// change page picture Orientation based on width
+function getWidth() {
+    console.log('second', clientWidth);
+    if(clientWidth <= 768){
+      // if(document.querySelector(".content-active").classList.contains("doug")) {
+      // // increase height if douglas
+      //    contentRight.style.height = "50vh";
+      //    contentRight.style.width = "60vw";
+      // }
+      console.log(true);
+    
+    } else if(clientWidth >= 768) {
+      // increase height if douglas
+      // if(document.querySelector(".content-active").classList.contains("doug")) {
+      //    contentRight.style.height = "80vh";
+      //   //  member.style.height = "80vh";
+      //    console.log(true);
+      //   } else {
+      //     // member.style.height = "70vh";
+      //     contentLeft.style.width = "50vw";
+      //   //  alert("zeh");
+      //   console.log(false);
+      // }
 
-   contentRight.style.height = "80vh";
-   member.style.height = "82vh";
-
+      console.log(false);
+    }
+  }
 
 function contentSelect(e) {
   if(e.target.matches("div.crew-link") && !e.target.classList.contains("active")){
-    
+
     if(e.target.matches("div.two")) { //check if second dot has been clicked
       member.src = "../assets/crew/image-mark-shuttleworth.webp";
       link.forEach(x => { // add "active" class
@@ -106,21 +130,10 @@ function contentSelect(e) {
         }
       });
       
+      // getWidth();
     }
-
-      // increase height if douglas
-      if(document.querySelector(".content-active").classList.contains("doug")) {
-         contentRight.style.height = "80vh";
-         member.style.height = "80vh";
-         console.log(true);
-        } else {
-          member.style.height = "70vh";
-          contentLeft.style.width = "50vw";
-        //  alert("zeh");
-        console.log(false);
-      }
-    
   }
 }
 
 links.addEventListener("click", contentSelect);
+window.onresize = getWidth;

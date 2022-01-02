@@ -48,15 +48,17 @@
   </div>
 
   <script>
-    document.querySelector(".button").addEventListener("mouseover", function (){
-      document.querySelector(".border").style.width = "450px";
-      document.querySelector(".border").style.height = "450px";
-    })
-
-    document.querySelector(".button").addEventListener("mouseout", function (){
-      document.querySelector(".border").style.width = "50px";
-      document.querySelector(".border").style.height = "50px";
-    })
+    if(screen.width > 1270){
+      document.querySelector(".button").addEventListener("mouseover", function (){
+        document.querySelector(".border").style.width = "450px";
+        document.querySelector(".border").style.height = "450px";
+      })
+  
+      document.querySelector(".button").addEventListener("mouseout", function (){
+        document.querySelector(".border").style.width = "50px";
+        document.querySelector(".border").style.height = "50px";
+      })
+    }
   </script>
 </body>
 </html>

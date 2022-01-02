@@ -6,16 +6,14 @@ var notActive = document.querySelectorAll("div.content-body:not(.content-active)
 var content = document.querySelectorAll(".content-body");
 var machine = document.querySelector(".machine");
 
-var clientWidth = document.body.clientWidth
-
 
 function contentSelect(e) {
   if(e.target.matches("div.tech-link") && !e.target.classList.contains("active")){
     
-    if(e.target.matches("div.two")) { //check if second dot has been clicked
+    if(e.target.matches("div.two")) { //check if second circle has been clicked
       machine.src = "../assets/technology/image-spaceport-portrait.jpg";
 
-      if(clientWidth <= 768){
+      if(screen.width <= 1270){
         machine.src = "../assets/technology/image-spaceport-landscape.jpg";
       }
 
@@ -37,10 +35,10 @@ function contentSelect(e) {
         }
       });
       
-    } else if(e.target.matches("div.three")) { // check if europa link has been clicked
+    } else if(e.target.matches("div.three")) { // check if circle three has been clicked
       machine.src = "../assets/technology/image-space-capsule-portrait.jpg";
 
-      if(clientWidth <= 768){
+      if(screen.width <= 1270){
         machine.src = "../assets/technology/image-space-capsule-landscape.jpg";
       }
       
@@ -63,11 +61,11 @@ function contentSelect(e) {
         }
       });
       
-    } else { //  check if the moon link has been clicked
+    } else { //  check if the circle one has been clicked
       machine.src = "../assets/technology/image-launch-vehicle-portrait.jpg";
 
-      if(clientWidth <= 768){
-        machine.src = "../assets/technology/space-launch-vehicle-landscape.jpg";
+      if(screen.width <= 1270){
+        machine.src = "../assets/technology/image-launch-vehicle-landscape.jpg";
       }
       
       link.forEach(x => {
@@ -97,7 +95,7 @@ function contentSelect(e) {
 
   // change page picture Orientation based on width
   function getWidth() {
-    if(clientWidth <= 768){
+    if(screen.width <= 1270){
       if(document.querySelector("content-two")) { 
         machine.src = "../assets/technology/image-spaceport-landscape.jpg";
       } else if(document.querySelector("content-three")) { 
@@ -117,4 +115,5 @@ function contentSelect(e) {
   }
 
 links.addEventListener("click", contentSelect);
+window.onload = getWidth;
 window.onresize = getWidth;
